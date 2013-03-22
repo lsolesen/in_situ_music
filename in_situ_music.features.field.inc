@@ -10,7 +10,7 @@
 function in_situ_music_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-album-body'
+  // Exported field: 'node-album-body'.
   $fields['node-album-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function in_situ_music_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -82,7 +83,7 @@ function in_situ_music_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-album-field_cover'
+  // Exported field: 'node-album-field_cover'.
   $fields['node-album-field_cover'] = array(
     'field_config' => array(
       'active' => '1',
@@ -103,6 +104,7 @@ function in_situ_music_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -139,6 +141,7 @@ function in_situ_music_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png jpg jpeg',
         'max_filesize' => '',
@@ -160,6 +163,7 @@ function in_situ_music_field_default_fields() {
             'image' => 'image',
             'video' => 0,
           ),
+          'browser_plugins' => array(),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
@@ -168,7 +172,7 @@ function in_situ_music_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-album-field_songs'
+  // Exported field: 'node-album-field_songs'.
   $fields['node-album-field_songs'] = array(
     'field_config' => array(
       'active' => '1',
@@ -178,11 +182,11 @@ function in_situ_music_field_default_fields() {
       'field_name' => 'field_songs',
       'foreign keys' => array(),
       'indexes' => array(
-        'target_entity' => array(
-          0 => 'target_type',
-          1 => 'target_id',
+        'target_id' => array(
+          0 => 'target_id',
         ),
       ),
+      'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
         'handler' => 'base',
@@ -242,7 +246,7 @@ function in_situ_music_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-song-body'
+  // Exported field: 'node-song-body'.
   $fields['node-song-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -265,6 +269,7 @@ function in_situ_music_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',
@@ -314,7 +319,7 @@ function in_situ_music_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-song-field_music'
+  // Exported field: 'node-song-field_music'.
   $fields['node-song-field_music'] = array(
     'field_config' => array(
       'active' => '1',
@@ -335,6 +340,7 @@ function in_situ_music_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'file',
       'settings' => array(
         'display_default' => 0,
@@ -379,8 +385,8 @@ function in_situ_music_field_default_fields() {
       'settings' => array(
         'description_field' => 0,
         'file_directory' => '',
-        'file_extensions' => 'mp3',
-        'max_filesize' => '',
+        'file_extensions' => 'mp3 mp4',
+        'max_filesize' => '5 mb',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -388,14 +394,17 @@ function in_situ_music_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
+            'private' => 0,
             'public' => 'public',
           ),
           'allowed_types' => array(
+            0 => 0,
             'audio' => 0,
             'default' => 0,
             'image' => 'image',
             'video' => 0,
           ),
+          'browser_plugins' => array(),
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
